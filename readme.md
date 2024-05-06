@@ -11,9 +11,7 @@ git clone https://github.com/fmrodrigues92/knights-backend
 cd knights-backend
 ```
 
-2. Renomeie o arquivo `.env.example` para `.env` e configure as variáveis de ambiente, se necessário.
-
-3. Execute o seguinte comando para construir os contêineres Docker e iniciar a aplicação:
+2. Execute o seguinte comando para construir os contêineres Docker e iniciar a aplicação:
 
 ```bash
 docker-compose up --build
