@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nodejs:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - mongodb
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongodb:27017/knights
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
