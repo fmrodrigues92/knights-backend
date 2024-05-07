@@ -48,7 +48,7 @@ class KnightsController {
             const knightServiceClass = new KnightService();
 
             const knightData = req.body;
-            const knight = await knightServiceClass.createKnight(knightData); // Usando knightServiceClass
+            const knight = await knightServiceClass.createKnight(knightData);
             res.status(201).json(knight);
         } catch (error) {
             res.status(400).send({ message: "Unable to create knight", error });
@@ -61,7 +61,7 @@ class KnightsController {
             const knightServiceClass = new KnightService();
 
             const id = req.params.id;
-            const knight = await knightServiceClass.getKnightById(id); // Usando knightServiceClass
+            const knight = await knightServiceClass.getKnightById(id);
             res.json(knight);
         } catch (error) {
             res.status(404).send({ message: "Knight not found", error });
@@ -74,8 +74,8 @@ class KnightsController {
             const knightServiceClass = new KnightService();
 
             const id = req.params.id;
-            await knightServiceClass.deleteKnight(id); // Usando knightServiceClass
-            res.status(204).send();  // No content to return
+            await knightServiceClass.deleteKnight(id); 
+            res.status(204).send();  
         } catch (error) {
             res.status(500).send({ message: "Failed to delete knight", error });
         }
@@ -87,7 +87,7 @@ class KnightsController {
             
             const id = req.params.id;
             const newNickname = req.body.nickname;
-            const knight = await knightServiceClass.updateKnightNickname(id, newNickname); // Usando knightServiceClass
+            const knight = await knightServiceClass.updateKnightNickname(id, newNickname);
             res.json(knight);
         } catch (error) {
             res.status(400).send({ message: "Unable to update knight", error });

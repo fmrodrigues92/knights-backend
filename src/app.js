@@ -5,9 +5,8 @@ const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const session = require('express-session');
-const knightsRouter = require('./domain/knights/routes');
 
-const knightsController = require('./domain/knights/controllers/knightsController');
+const knightsRouter = require('./domain/knights/routes');
 
 const app = express();
 const port = 3000;

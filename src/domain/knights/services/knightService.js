@@ -4,7 +4,7 @@ const knightRepository = new KnightRepository();
 class KnightService {
     async listKnights(filter) {
         if (filter === 'heroes') {
-            return await knightRepository.findHeroes();  // Aqui deve ser implementado o filtro para heroes
+            return await knightRepository.findHeroes();
         }
         return await knightRepository.findAll();
     }
@@ -18,7 +18,7 @@ class KnightService {
     }
 
     async deleteKnight(id) {
-        return await knightRepository.softDelete(id);  // Assume que um método para soft delete esteja implementado
+        return await knightRepository.softDelete(id);
     }
 
     async updateKnightNickname(id, newNickname) {

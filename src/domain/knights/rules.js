@@ -1,13 +1,13 @@
-// domain/knights/rules.js
-
 // Função para calcular a idade com base na data de nascimento
 function calcularIdade(dataNascimento) {
     const hoje = new Date();
-    const nascimento = new Date(dataNascimento);
+    const partesDataNascimento = dataNascimento.split('-');
+    const nascimento = new Date(partesDataNascimento[0], partesDataNascimento[1] - 1, partesDataNascimento[2]);
     const diferencaAnos = hoje.getFullYear() - nascimento.getFullYear();
-    if (new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate()) < new Date(hoje.getFullYear(), nascimento.getMonth(), nascimento.getDate())) {
+    if (hoje < new Date(hoje.getFullYear(), nascimento.getMonth(), nascimento.getDate())) {
         return diferencaAnos - 1;
     }
+    console.log(diferencaAnos);
     return diferencaAnos;
 }
 

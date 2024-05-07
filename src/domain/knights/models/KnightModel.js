@@ -39,7 +39,7 @@ const knightSchema = new mongoose.Schema({
         required: true
     },
     birthday: {
-        type: String,  // consider using Date type if you want to store actual date values
+        type: String,
         required: true
     },
     weapons: [weaponSchema],
@@ -47,7 +47,7 @@ const knightSchema = new mongoose.Schema({
     keyAttribute: {
         type: String,
         required: true,
-        enum: ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'] // Ensures the key attribute is one of the specified values
+        enum: ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
     },
     deleted_at: {
         type: Date,

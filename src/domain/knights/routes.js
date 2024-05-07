@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const knightsController = require('./controllers/knightsController');  // Assuming knightsController exports an instance
+const knightsController = require('./controllers/knightsController');
 
 router.get('/knights', knightsController.getKnights);
 router.post('/knights', knightsController.createKnight);
